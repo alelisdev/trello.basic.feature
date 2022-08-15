@@ -1,0 +1,10 @@
+.spinner {
+    width: 1.1rem;
+    height: 1.1rem;
+    font-size: .80rem;
+    margin-left: 1rem;
+}
+
+.board {
+    height: 100px;
+}

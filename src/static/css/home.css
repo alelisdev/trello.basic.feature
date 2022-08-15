@@ -1,0 +1,32 @@
+
+.home {
+    position: relative;
+    background: url("../img/home-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-bottom: -50px;
+}
+
+.splash-text {
+    font-size: large;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    bottom: 100px;
+    left: 100px;
+}
+
+.splash-text h1 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    line-height: 5rem;
+}
+
+.btn-start {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 500px;
+    border-radius: 5px;
+    border: solid 1px;
+}
