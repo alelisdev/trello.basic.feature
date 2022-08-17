@@ -1,28 +1,22 @@
-import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ROUTES } from './static/constants';
-import HomePage from './pages/HomePage';
-import BoardsPage from './pages/BoardsPage';
-import BoardPage from './pages/BoardPage';
-import NotFoundPage from './pages/NotFoundPage';
-
-import './App.css';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Header from "./components/headers/Header";
+import 'react-loading-skeleton/dist/skeleton.css';
+import Landing from "./pages/Landing";
+import Board from "./pages/Board";
+import Error404 from "./pages/Error404";
 
 function App() {
-  return (
-    <>
-        <Router>
-            <Fragment>
-                <Routes>
-                    <Route path={ROUTES.HOME} element={<HomePage />} />
-                    <Route path={ROUTES.BOARDS} element={<BoardsPage />} />
-                    <Route path={ROUTES.BOARD} element={<BoardPage />} />
-                    <Route path={ROUTES.NOTFOUND} element={<NotFoundPage />} />
-                </Routes>
-            </Fragment>
-      </Router>
-    </>
-  );
+    return (
+        <>
+            <Route path="/" component={Header} />
+            <Switch>
+                <Route exact path="/" component={Landing} />
+                <Route exact path="/board/:id" component={Board} />
+                <Route path="" component={Error404} />
+            </Switch>
+        </>
+    );
 }
 
 export default App;
